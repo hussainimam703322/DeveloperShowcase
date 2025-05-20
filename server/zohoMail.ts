@@ -5,7 +5,9 @@ import type { ContactSubmission } from "../shared/schema";
 const ZOHO_HOST = 'smtp.zoho.com';
 const ZOHO_PORT = 465;
 const ZOHO_USER = 'hussainimam78621@gmail.com'; // Your Zoho email
-const ZOHO_API_KEY = '1c976dfd7cd7154c7b5d4d740e6e0d9e';
+// Note: Using app-specific password instead of API key for Zoho Mail
+// You'll need to generate an app-specific password in your Zoho Mail account
+const ZOHO_PASSWORD = '1c976dfd7cd7154c7b5d4d740e6e0d9e';
 
 // Create reusable transporter
 const transporter = nodemailer.createTransport({
@@ -14,7 +16,7 @@ const transporter = nodemailer.createTransport({
   secure: true, // true for port 465
   auth: {
     user: ZOHO_USER,
-    pass: ZOHO_API_KEY
+    pass: ZOHO_PASSWORD
   }
 });
 

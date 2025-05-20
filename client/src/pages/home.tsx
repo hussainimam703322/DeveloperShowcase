@@ -2,6 +2,7 @@ import HeroSection from "@/components/HeroSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import BlogSection from "@/components/BlogSection";
 import ContactSection from "@/components/ContactSection";
+import TechnicalSkillsSection from "@/components/TechnicalSkillsSection";
 import { useEffect } from "react";
 import { useLocation } from "wouter";
 import { useScrollToElement } from "@/hooks/useScrollToElement";
@@ -26,6 +27,7 @@ export default function Home() {
   return (
     <div className="scroll-smooth">
       <HeroSection />
+      <TechnicalSkillsSection />
       <ProjectsSection />
       <BlogSection />
       <ContactSection />
