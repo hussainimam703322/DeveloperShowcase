@@ -4,7 +4,7 @@ import { storage } from "./storage";
 import { contactFormSchema } from "@shared/schema";
 import { type ZodError } from "zod";
 import { fromZodError } from "zod-validation-error";
-import { sendContactNotificationEmail } from "./email";
+import { sendContactNotificationEmail } from "./zohoMail";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // API routes
