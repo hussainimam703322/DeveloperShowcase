@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { technicalSkills } from "@/lib/data";
-import SkillCard from "./SkillCard";
+import AnimatedSkillCard from "./AnimatedSkillCard";
 
 export default function TechnicalSkillsSection() {
   return (
@@ -40,14 +40,25 @@ export default function TechnicalSkillsSection() {
           </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {technicalSkills.map((skillGroup, index) => (
-            <SkillCard 
-              key={skillGroup.category} 
-              category={skillGroup.category} 
-              skills={skillGroup.skills}
-              index={index}
-            />
+            <motion.div
+              key={skillGroup.category}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ 
+                duration: 0.6, 
+                delay: index * 0.1, 
+                ease: [0.19, 1.0, 0.22, 1.0]
+              }}
+              viewport={{ once: true }}
+            >
+              <AnimatedSkillCard 
+                category={skillGroup.category} 
+                skills={skillGroup.skills}
+                colorIndex={index}
+              />
+            </motion.div>
           ))}
         </div>
       </div>
