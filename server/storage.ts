@@ -1,38 +1,57 @@
-import { users, type User, type InsertUser } from "@shared/schema";
-
-// modify the interface with any CRUD methods
-// you might need
+import { 
+  Project, 
+  BlogPost, 
+  ContactSubmission,
+  InsertContact,
+  fallbackProjects,
+  fallbackBlogPosts
+} from "@shared/schema";
 
 export interface IStorage {
-  getUser(id: number): Promise<User | undefined>;
-  getUserByUsername(username: string): Promise<User | undefined>;
-  createUser(user: InsertUser): Promise<User>;
+  getProjects(): Promise<Project[]>;
+  getBlogPosts(): Promise<BlogPost[]>;
+  submitContactForm(data: InsertContact): Promise<ContactSubmission>;
 }
 
 export class MemStorage implements IStorage {
-  private users: Map<number, User>;
-  currentId: number;
+  private projects: Map<number, Project>;
+  private blogPosts: Map<number, BlogPost>;
+  private contactSubmissions: Map<number, ContactSubmission>;
+  private contactSubmissionId: number;
 
   constructor() {
-    this.users = new Map();
-    this.currentId = 1;
+    // Initialize storage with fallback data
+    this.projects = new Map();
+    fallbackProjects.forEach(project => {
+      this.projects.set(project.id, project);
+    });
+
+    this.blogPosts = new Map();
+    fallbackBlogPosts.forEach(post => {
+      this.blogPosts.set(post.id, post);
+    });
+
+    this.contactSubmissions = new Map();
+    this.contactSubmissionId = 1;
   }
 
-  async getUser(id: number): Promise<User | undefined> {
-    return this.users.get(id);
+  async getProjects(): Promise<Project[]> {
+    return Array.from(this.projects.values());
   }
 
-  async getUserByUsername(username: string): Promise<User | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.username === username,
-    );
+  async getBlogPosts(): Promise<BlogPost[]> {
+    return Array.from(this.blogPosts.values());
   }
 
-  async createUser(insertUser: InsertUser): Promise<User> {
-    const id = this.currentId++;
-    const user: User = { ...insertUser, id };
-    this.users.set(id, user);
-    return user;
+  async submitContactForm(data: InsertContact): Promise<ContactSubmission> {
+    const id = this.contactSubmissionId++;
+    const submission: ContactSubmission = {
+      ...data,
+      id,
+      submittedAt: new Date()
+    };
+    this.contactSubmissions.set(id, submission);
+    return submission;
   }
 }
 

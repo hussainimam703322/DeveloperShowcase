@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "wouter";
 import { cn } from "@/lib/utils";
 import { useTheme } from "@/context/ThemeContext";
 import { useScrollToElement } from "@/hooks/useScrollToElement";
@@ -47,12 +46,10 @@ export default function Header() {
     >
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/">
-            <a className="flex items-center gap-2 font-bold text-primary-500 dark:text-primary-400 text-xl">
-              <Code className="h-6 w-6" />
-              <span>DevHub</span>
-            </a>
-          </Link>
+          <div className="flex items-center gap-2 font-bold text-primary-500 dark:text-primary-400 text-xl">
+            <Code className="h-6 w-6" />
+            <span>DevHub</span>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
@@ -77,9 +74,9 @@ export default function Header() {
               aria-label="Toggle theme"
             >
               {theme === "dark" ? (
-                <Sun className="h-5 w-5" />
+                <Sun className="h-5 w-5 text-yellow-400" />
               ) : (
-                <Moon className="h-5 w-5" />
+                <Moon className="h-5 w-5 text-slate-700" />
               )}
             </Button>
           </nav>
@@ -94,9 +91,9 @@ export default function Header() {
               aria-label="Toggle theme"
             >
               {theme === "dark" ? (
-                <Sun className="h-5 w-5" />
+                <Sun className="h-5 w-5 text-yellow-400" />
               ) : (
-                <Moon className="h-5 w-5" />
+                <Moon className="h-5 w-5 text-slate-700" />
               )}
             </Button>
             <Button

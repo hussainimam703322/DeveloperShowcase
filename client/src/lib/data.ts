@@ -94,14 +94,14 @@ export const fallbackBlogPosts: BlogPost[] = [
 
 // Developer information
 export const developerInfo = {
-  name: "Alex Johnson",
+  name: "Imam Hussain",
   title: "Full Stack Developer",
   bio: "I build modern web applications with React, Node.js and cloud technologies. Passionate about creating intuitive user experiences and scalable architectures.",
   skills: ["React", "Next.js", "Node.js", "TypeScript", "AWS"],
-  image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400",
-  location: "San Francisco, CA",
-  email: "alex@example.com",
-  availability: "Mon-Fri, 9:00 AM - 5:00 PM PST",
+  image: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400",
+  location: "Dubai, UAE",
+  email: "imam.hussain@example.com",
+  availability: "Mon-Fri, 9:00 AM - 5:00 PM GST",
   socialLinks: {
     github: "https://github.com/",
     linkedin: "https://linkedin.com/",
