@@ -16,12 +16,10 @@ export default function Footer() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
             <div>
-              <Link href="/">
-                <a className="flex items-center gap-2 font-bold text-primary-400 text-xl mb-4">
-                  <Code className="h-6 w-6" />
-                  <span>DevHub</span>
-                </a>
-              </Link>
+              <div className="flex items-center gap-2 font-bold text-primary-400 text-xl mb-4">
+                <Code className="h-6 w-6" />
+                <span>DevHub</span>
+              </div>
               <p className="text-dark-400 max-w-md">
                 Building innovative web solutions with modern technologies and best practices.
               </p>
@@ -99,7 +97,7 @@ export default function Footer() {
                 <Twitter className="h-5 w-5" />
               </a>
               <a
-                href="mailto:alex@example.com"
+                href="mailto:imam.hussain@example.com"
                 className="text-dark-400 hover:text-white transition-colors"
                 aria-label="Email"
               >
@@ -109,7 +107,7 @@ export default function Footer() {
           </div>
           
           <div className="border-t border-dark-700 mt-8 pt-8 text-center text-dark-400 text-sm">
-            &copy; {new Date().getFullYear()} Alex Johnson. All rights reserved.
+            &copy; {new Date().getFullYear()} Imam Hussain. All rights reserved.
           </div>
         </div>
       </div>
