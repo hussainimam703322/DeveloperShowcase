@@ -1,22 +1,20 @@
 import { MailService } from '@sendgrid/mail';
-import { ContactSubmission } from '@/shared/schema';
+import type { ContactSubmission } from "../shared/schema";
 
+// Create mail service instance
 const mailService = new MailService();
 
-if (!process.env.SENDGRID_API_KEY) {
-  console.warn("SENDGRID_API_KEY environment variable is not set. Email functionality will not work.");
-} else {
+if (process.env.SENDGRID_API_KEY) {
   mailService.setApiKey(process.env.SENDGRID_API_KEY);
+} else {
+  console.warn("SENDGRID_API_KEY environment variable is not set. Email functionality will not work.");
 }
 
-interface EmailParams {
-  to: string;
-  from: string;
-  subject: string;
-  text?: string;
-  html?: string;
-}
-
+/**
+ * Sends an email notification when a new contact form is submitted
+ * @param submission The contact form submission data
+ * @returns Promise<boolean> - True if email was sent successfully, false otherwise
+ */
 export async function sendContactNotificationEmail(
   submission: ContactSubmission
 ): Promise<boolean> {
@@ -26,30 +24,28 @@ export async function sendContactNotificationEmail(
   }
   
   try {
-    const params: EmailParams = {
+    // Create the email content
+    const msg = {
       to: "hussainimam78621@gmail.com", // Your email address
-      from: "portfolio@ascenthub.com", // This should be a verified sender in your SendGrid account
+      from: "hussainimam78621@gmail.com", // Must be a verified sender in your SendGrid account
       subject: `New Contact Form Submission from ${submission.name}`,
-      html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${submission.name}</p>
-        <p><strong>Email:</strong> ${submission.email}</p>
-        <p><strong>Subject:</strong> ${submission.subject}</p>
-        <p><strong>Message:</strong></p>
-        <p>${submission.message}</p>
-      `,
-      text: `
-        New Contact Form Submission
-        
-        Name: ${submission.name}
-        Email: ${submission.email}
-        Subject: ${submission.subject}
-        Message: ${submission.message}
-      `
+      content: [
+        {
+          type: "text/html",
+          value: `
+            <h2>New Contact Form Submission</h2>
+            <p><strong>Name:</strong> ${submission.name}</p>
+            <p><strong>Email:</strong> ${submission.email}</p>
+            <p><strong>Subject:</strong> ${submission.subject}</p>
+            <p><strong>Message:</strong></p>
+            <p>${submission.message.replace(/\n/g, '<br>')}</p>
+          `
+        }
+      ]
     };
     
-    await mailService.send(params);
-    console.log(`Contact notification email sent to ${params.to}`);
+    await mailService.send(msg);
+    console.log(`Contact notification email sent to ${msg.to}`);
     return true;
   } catch (error) {
     console.error('SendGrid email error:', error);

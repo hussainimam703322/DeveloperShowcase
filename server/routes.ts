@@ -4,6 +4,7 @@ import { storage } from "./storage";
 import { contactFormSchema } from "@shared/schema";
 import { type ZodError } from "zod";
 import { fromZodError } from "zod-validation-error";
+import { sendContactNotificationEmail } from "./email";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // API routes
@@ -35,9 +36,19 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Submit contact form
       const submission = await storage.submitContactForm(validatedData);
       
+      // Send email notification
+      let emailStatus = false;
+      try {
+        emailStatus = await sendContactNotificationEmail(submission);
+      } catch (emailError) {
+        console.error("Error sending email notification:", emailError);
+        // We don't want to fail the whole request if just the email fails
+      }
+      
       res.status(201).json({ 
         message: "Contact form submitted successfully",
-        id: submission.id 
+        id: submission.id,
+        emailSent: emailStatus
       });
     } catch (error) {
       console.error("Error submitting contact form:", error);
