@@ -98,13 +98,13 @@ export const developerInfo = {
   title: "Full Stack Developer",
   bio: "I build modern web applications with React, Node.js and cloud technologies. Passionate about creating intuitive user experiences and scalable architectures.",
   skills: ["React", "Next.js", "Node.js", "TypeScript", "AWS"],
-  image: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400",
+  image: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg",
   location: "Dubai, UAE",
-  email: "imam.hussain@example.com",
+  email: "hussainimam78621@gmail.com",
   availability: "Mon-Fri, 9:00 AM - 5:00 PM GST",
   socialLinks: {
-    github: "https://github.com/",
-    linkedin: "https://linkedin.com/",
+    github: "https://github.com/hussainimam703322",
+    linkedin: "https://www.linkedin.com/in/imam-hussain-b27086221/",
     twitter: "https://twitter.com/"
   }
 };

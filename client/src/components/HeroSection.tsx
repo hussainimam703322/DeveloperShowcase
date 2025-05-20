@@ -71,7 +71,7 @@ export default function HeroSection() {
           
           <div className="flex flex-wrap justify-center md:justify-start gap-6 mt-12 pt-8 border-t border-dark-200 dark:border-dark-700">
             <a 
-              href={developerInfo.socialLinks.github} 
+              href="https://github.com/hussainimam703322" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="flex items-center gap-2 text-dark-600 dark:text-dark-300 hover:text-dark-900 dark:hover:text-white transition-colors"
@@ -80,7 +80,7 @@ export default function HeroSection() {
               <span>GitHub</span>
             </a>
             <a 
-              href={developerInfo.socialLinks.linkedin} 
+              href="https://www.linkedin.com/in/imam-hussain-b27086221/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="flex items-center gap-2 text-dark-600 dark:text-dark-300 hover:text-dark-900 dark:hover:text-white transition-colors"
@@ -89,7 +89,7 @@ export default function HeroSection() {
               <span>LinkedIn</span>
             </a>
             <a 
-              href={developerInfo.socialLinks.twitter} 
+              href="https://twitter.com/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="flex items-center gap-2 text-dark-600 dark:text-dark-300 hover:text-dark-900 dark:hover:text-white transition-colors"
@@ -98,7 +98,7 @@ export default function HeroSection() {
               <span>Twitter</span>
             </a>
             <a 
-              href={`mailto:${developerInfo.email}`} 
+              href="mailto:hussainimam78621@gmail.com" 
               className="flex items-center gap-2 text-dark-600 dark:text-dark-300 hover:text-dark-900 dark:hover:text-white transition-colors"
             >
               <Mail className="h-5 w-5" />

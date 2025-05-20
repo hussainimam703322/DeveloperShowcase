@@ -70,7 +70,7 @@ export default function Footer() {
             
             <div className="flex space-x-4">
               <a
-                href="https://github.com/"
+                href="https://github.com/hussainimam703322"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-dark-400 hover:text-white transition-colors"
@@ -79,7 +79,7 @@ export default function Footer() {
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="https://linkedin.com/"
+                href="https://www.linkedin.com/in/imam-hussain-b27086221/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-dark-400 hover:text-white transition-colors"
@@ -97,7 +97,7 @@ export default function Footer() {
                 <Twitter className="h-5 w-5" />
               </a>
               <a
-                href="mailto:imam.hussain@example.com"
+                href="mailto:hussainimam78621@gmail.com"
                 className="text-dark-400 hover:text-white transition-colors"
                 aria-label="Email"
               >
