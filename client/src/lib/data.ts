@@ -95,16 +95,68 @@ export const fallbackBlogPosts: BlogPost[] = [
 // Developer information
 export const developerInfo = {
   name: "Imam Hussain",
-  title: "Full Stack Developer",
-  bio: "I build modern web applications with React, Node.js and cloud technologies. Passionate about creating intuitive user experiences and scalable architectures.",
-  skills: ["React", "Next.js", "Node.js", "TypeScript", "AWS"],
+  title: "Java Full Stack Developer",
+  bio: "I build modern web applications with Java, Spring Boot and React. Passionate about creating scalable architectures and intuitive user experiences with a focus on security and performance.",
+  skills: ["Java", "Spring Boot", "React.js", "Spring Security", "PostgreSQL", "MySQL", "Microservices", "RESTful APIs", "Postman", "Git"],
+  education: {
+    university: "Sathyabama Institute of Science and Technology",
+    location: "Chennai, India",
+    degree: "B. Tech - Information Technology",
+    gpa: "CGPA: 8.91",
+    period: "Sep. 2020 - June 2024"
+  },
   image: "/images/profile.jpg",
-  location: "Dubai, UAE",
+  location: "Chennai, India",
   email: "hussainimam78621@gmail.com",
-  availability: "Mon-Fri, 9:00 AM - 5:00 PM GST",
+  availability: "Mon-Fri, 9:00 AM - 5:00 PM IST",
   socialLinks: {
     github: "https://github.com/hussainimam703322",
     linkedin: "https://www.linkedin.com/in/imam-hussain-b27086221/",
     twitter: "https://twitter.com/"
   }
 };
+
+// Technical Skills
+export const technicalSkills = [
+  { category: "Programming Languages", skills: ["Core Java", "Python"] },
+  { category: "Front-end Technologies", skills: ["HTML", "CSS", "JavaScript", "React JS"] },
+  { category: "Back-end Technologies", skills: ["Spring Boot", "Spring Security", "RESTful API", "Microservices"] },
+  { category: "Testing & Automation Tools", skills: ["Selenium", "TestNG", "Cucumber", "JMeter", "Postman", "JUnit", "Robot Framework"] },
+  { category: "Version Control & CI/CD", skills: ["Git", "GitHub", "Jenkins"] },
+  { category: "Databases", skills: ["MySQL", "PostgreSQL", "MongoDB"] },
+  { category: "Experience with IDEs", skills: ["VsCode", "IntelliJ IDEA", "Eclipse", "Pycharm"] }
+];
+
+// Projects data (updated with your real projects)
+export const projectsData = [
+  {
+    id: 1,
+    title: "ATM Management System",
+    description: "A full-stack ATM simulation using React JS for the frontend and Spring Boot with RESTful APIs for backend operations. Implemented Spring Security for secure authentication and role-based access control, ensuring user data privacy. Integrated Microservices architecture for handling transactions, account management, and authentication as independent services.",
+    image: "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=340",
+    demoUrl: "#",
+    codeUrl: "https://github.com/hussainimam703322",
+    tags: ["Spring Boot", "React.js", "Microservices", "Spring Security"],
+    featured: true
+  },
+  {
+    id: 2,
+    title: "Expense Manager",
+    description: "Built an interactive expense tracking dashboard using React JS, HTML, CSS, and JavaScript, ensuring an intuitive UI/UX. Developed a robust backend with Spring Boot and RESTful APIs, allowing users to manage budgets, track expenditures, and generate reports. Integrated Microservices architecture for modular expense categorization, authentication, and report generation, enhancing scalability.",
+    image: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=340",
+    demoUrl: "#",
+    codeUrl: "https://github.com/hussainimam703322",
+    tags: ["React.js", "Spring Boot", "RESTful API", "Microservices"],
+    featured: true
+  },
+  {
+    id: 3,
+    title: "Moralizer",
+    description: "Created a web application using React JS for the UI and Spring Boot for backend processing of article summaries. Implemented RESTful APIs to extract, summarize, and display article content while ensuring secure API interaction.",
+    image: "https://images.unsplash.com/photo-1519337265831-281ec6cc8514?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=340",
+    demoUrl: "#",
+    codeUrl: "https://github.com/hussainimam703322",
+    tags: ["React.js", "Spring Boot", "RESTful API", "Content Processing"],
+    featured: true
+  }
+];

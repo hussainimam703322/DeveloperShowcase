@@ -18,7 +18,7 @@ export default function Footer() {
             <div>
               <div className="flex items-center gap-2 font-bold text-primary-400 text-xl mb-4">
                 <Code className="h-6 w-6" />
-                <span>DevHub</span>
+                <span>AscentHub</span>
               </div>
               <p className="text-dark-400 max-w-md">
                 Building innovative web solutions with modern technologies and best practices.
