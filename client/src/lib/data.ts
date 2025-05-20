@@ -98,7 +98,7 @@ export const developerInfo = {
   title: "Full Stack Developer",
   bio: "I build modern web applications with React, Node.js and cloud technologies. Passionate about creating intuitive user experiences and scalable architectures.",
   skills: ["React", "Next.js", "Node.js", "TypeScript", "AWS"],
-  image: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg",
+  image: "/images/profile.jpg",
   location: "Dubai, UAE",
   email: "hussainimam78621@gmail.com",
   availability: "Mon-Fri, 9:00 AM - 5:00 PM GST",
