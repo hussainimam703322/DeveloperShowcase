@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 
+
 interface AuthPageProps {
   onAuth: () => void;
 }
@@ -35,7 +36,7 @@ const AuthPage: React.FC<AuthPageProps> = ({ onAuth }) => {
             animate={{ scale: 1 }}
             transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
           >
-            <span>AscentHub</span>
+            <span>TheHPortfolio</span>
           </motion.div>
           
           <motion.h1 

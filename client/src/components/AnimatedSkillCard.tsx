@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 interface AnimatedSkillCardProps {
   category: string;
@@ -7,15 +7,31 @@ interface AnimatedSkillCardProps {
   colorIndex: number;
 }
 
-const colors = ['#01e100', '#f50076', '#00e6fd', '#f7bc06', '#8400ff', '#ff6b01'];
+const colors = [
+  "#01e100",
+  "#f50076",
+  "#00e6fd",
+  "#f7bc06",
+  "#8400ff",
+  "#ff6b01",
+];
 
-const AnimatedSkillCard: React.FC<AnimatedSkillCardProps> = ({ category, skills, colorIndex }) => {
+const AnimatedSkillCard: React.FC<AnimatedSkillCardProps> = ({
+  category,
+  skills,
+  colorIndex,
+}) => {
   const cardColor = colors[colorIndex % colors.length];
-  
+
   return (
     <StyledCard>
       <div className="card-container">
-        <div className="loader" style={{'--clr': cardColor, '--i': colorIndex} as React.CSSProperties} />
+        <div
+          className="loader"
+          style={
+            { "--clr": cardColor, "--i": colorIndex } as React.CSSProperties
+          }
+        />
         <div className="content">
           <h3>{category}</h3>
           <div className="skills-container">
@@ -29,7 +45,7 @@ const AnimatedSkillCard: React.FC<AnimatedSkillCardProps> = ({ category, skills,
       </div>
     </StyledCard>
   );
-}
+};
 
 const StyledCard = styled.div`
   .card-container {
@@ -41,7 +57,7 @@ const StyledCard = styled.div`
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease;
-    
+
     &:hover {
       transform: translateY(-8px);
     }
@@ -84,7 +100,7 @@ const StyledCard = styled.div`
   }
 
   h3 {
-    color: var(--clr);
+    color: white;
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 16px;
@@ -107,7 +123,7 @@ const StyledCard = styled.div`
     border-radius: 20px;
     font-size: 0.8rem;
     transition: all 0.3s ease;
-    
+
     &:hover {
       background: var(--clr);
       color: #000;

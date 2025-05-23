@@ -49,7 +49,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2 font-bold text-primary-500 dark:text-primary-400 text-xl">
             <Code className="h-6 w-6" />
-            <span>AscentHub</span>
+            <span>TheHPortfolio</span>
           </div>
 
           {/* Desktop Navigation */}

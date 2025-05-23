@@ -11,25 +11,27 @@ export default function TechnicalSkillsSection() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-8"
         >
-          <motion.h2 
-            className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4"
-            initial={{ y: -20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
+          <motion.h2
+            className="text-3xl font-bold text-gray-800 dark:text-white"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
             Technical Skills
           </motion.h2>
-          <motion.div 
+
+          <motion.div
             className="w-24 h-1 bg-primary-500 mx-auto mb-6"
             initial={{ width: 0 }}
             whileInView={{ width: 96 }}
             transition={{ delay: 0.4, duration: 0.8 }}
             viewport={{ once: true }}
           ></motion.div>
-          <motion.p 
+
+          <motion.p
             className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -46,15 +48,15 @@ export default function TechnicalSkillsSection() {
               key={skillGroup.category}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ 
-                duration: 0.6, 
-                delay: index * 0.1, 
-                ease: [0.19, 1.0, 0.22, 1.0]
+              transition={{
+                duration: 0.6,
+                delay: index * 0.1,
+                ease: [0.19, 1.0, 0.22, 1.0],
               }}
               viewport={{ once: true }}
             >
-              <AnimatedSkillCard 
-                category={skillGroup.category} 
+              <AnimatedSkillCard
+                category={skillGroup.category}
                 skills={skillGroup.skills}
                 colorIndex={index}
               />

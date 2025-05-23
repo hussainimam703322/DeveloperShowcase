@@ -101,10 +101,11 @@ export const developerInfo = {
   education: {
     university: "Sathyabama Institute of Science and Technology",
     location: "Chennai, India",
-    degree: "B. Tech - Information Technology",
+    degree: "B.Tech - Computer science and engineering",
     gpa: "CGPA: 8.91",
-    period: "Sep. 2020 - June 2024"
+    period: "July. 2020 - May 2024"
   },
+  
   image: "/images/profile.jpg",
   location: "Chennai, India",
   email: "hussainimam78621@gmail.com",

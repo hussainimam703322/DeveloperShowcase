@@ -18,7 +18,7 @@ export default function Footer() {
             <div>
               <div className="flex items-center gap-2 font-bold text-primary-400 text-xl mb-4">
                 <Code className="h-6 w-6" />
-                <span>AscentHub</span>
+                <span>TheHPortfolio</span>
               </div>
               <p className="text-dark-400 max-w-md">
                 Building innovative web solutions with modern technologies and best practices.
@@ -107,7 +107,7 @@ export default function Footer() {
           </div>
           
           <div className="border-t border-dark-700 mt-8 pt-8 text-center text-dark-400 text-sm">
-            &copy; {new Date().getFullYear()} Imam Hussain. All rights reserved.
+            &copy; {new Date().getFullYear()} TheHPortfolio. All rights reserved.
           </div>
         </div>
       </div>

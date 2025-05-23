@@ -234,36 +234,7 @@ export default function HeroSection() {
         transition={{ delay: 1.2, duration: 0.8 }}
         className="container mx-auto px-4 md:px-8 mt-20"
       >
-        <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-dark-800 dark:text-dark-200">
-          Technical Skills
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {technicalSkills.map((skillGroup, index) => (
-            <motion.div 
-              key={skillGroup.category}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.4 + (index * 0.1) }}
-              whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
-              className="bg-white dark:bg-dark-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
-            >
-              <h3 className="text-lg font-semibold mb-4 text-primary-600 dark:text-primary-400 border-b border-dark-200 dark:border-dark-700 pb-2">
-                {skillGroup.category}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {skillGroup.skills.map(skill => (
-                  <motion.span 
-                    key={skill}
-                    whileHover={{ scale: 1.05 }}
-                    className="px-3 py-1 bg-dark-100 dark:bg-dark-700 rounded-full text-sm text-dark-700 dark:text-dark-300"
-                  >
-                    {skill}
-                  </motion.span>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        
       </motion.div>
     </section>
   );

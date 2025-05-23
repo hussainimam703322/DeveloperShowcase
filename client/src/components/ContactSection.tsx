@@ -99,6 +99,7 @@ export default function ContactSection() {
                       <div>
                         <p className="text-white/80 text-sm mb-1">Location</p>
                         <p className="text-white">{developerInfo.location}</p>
+                         {/* <p className="text-white">Dubai</p> */}
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
